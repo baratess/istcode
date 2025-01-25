@@ -1,5 +1,4 @@
-﻿// use client
-"use client";
+﻿"use client";
 
 import React, { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
@@ -19,6 +18,8 @@ const BlogPage: React.FC = () => {
   const category = searchParams.get("category");
 
   useEffect(() => {
+    setVisibleCount(6);
+
     if (category) {
       const filtered = dummy.filter((post) => post.category === category);
       setFilteredPosts(filtered);
@@ -37,24 +38,33 @@ const BlogPage: React.FC = () => {
         {filteredPosts.slice(0, visibleCount).map((post: BlogPost) => (
           <div
             key={post.id}
-            className="border border-gray-300 p-6 rounded-lg shadow-md"
+            className="border border-gray-500 p-6 rounded-lg shadow-md bg-slate-100"
           >
             <h2 className="text-2xl font-bold text-gray-800">{post.title}</h2>
-            <h2 className="text-base font-bold text-gray-800">
+            <h3 className="text-base font-semibold text-gray-600 mt-2">
               Kategori: {post.category.toLocaleUpperCase("tr")}
-            </h2>
+            </h3>
             <div className="mt-4 text-gray-700">
               <p>{post.description}</p>
+            </div>
+
+            <div className="mt-4">
+              <a
+                href={`/blogs/${post.id}`}
+                className="text-blue-500 hover:underline"
+              >
+                Detayları Gör
+              </a>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="flex flex-1 justify-center">
+      <div className="flex justify-center mt-8">
         {visibleCount < filteredPosts.length && (
           <button
             onClick={loadMore}
-            className=" mt-8 py-2 px-4 bg-purple-600 text-white rounded-md hover:bg-purple-500"
+            className="py-2 px-4 bg-purple-600 text-white rounded-md hover:bg-purple-500"
           >
             Daha Fazla Göster
           </button>

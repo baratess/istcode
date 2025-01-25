@@ -1,8 +1,8 @@
-﻿// use client
-"use client";
+﻿"use client";
 
 import { CiSearch } from "react-icons/ci";
 import React, { useState, useRef, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import dummy from "../../../utils/dummy.json";
 
 const Search = () => {
@@ -10,9 +10,14 @@ const Search = () => {
   const [query, setQuery] = useState<string>("");
   const [filteredPosts, setFilteredPosts] = useState(dummy);
   const searchRef = useRef<HTMLDivElement | null>(null);
+  const router = useRouter();
 
   const handleSearchToggle = () => {
     setIsSearchOpen(!isSearchOpen);
+    if (isSearchOpen) {
+      setQuery("");
+      setFilteredPosts(dummy);
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -29,10 +34,18 @@ const Search = () => {
     }
   };
 
+  const handlePostClick = (postId: string) => {
+    setIsSearchOpen(false);
+    setQuery("");
+    router.push(`/blogs/${postId}`);
+  };
+
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(e.target as Node)) {
         setIsSearchOpen(false);
+        setQuery("");
+        setFilteredPosts(dummy);
       }
     };
 
@@ -80,7 +93,8 @@ const Search = () => {
                   filteredPosts.map((post) => (
                     <div
                       key={post.id}
-                      className="border border-gray-300 p-2 rounded shadow-md mb-2"
+                      className="border border-gray-300 p-2 rounded shadow-md mb-2 cursor-pointer"
+                      onClick={() => handlePostClick(post.id)}
                     >
                       <h2 className="text-lg font-bold text-gray-800">
                         {post.title}

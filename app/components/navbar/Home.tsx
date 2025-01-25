@@ -1,18 +1,11 @@
-﻿// "use client"
-"use client";
+﻿"use client";
 
-import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const Home = () => {
-  const pathname = usePathname();
-
-  const handleHomeClick = () => {
-    const newUrl = `${pathname}`;
-    window.location.href = newUrl;
-  };
   return (
-    <div className="flex px-6 cursor-pointer" onClick={handleHomeClick}>
-      ANASAYFA
+    <div className="flex px-6 cursor-pointer">
+      <Link href={"/"}>ANASAYFA</Link>
     </div>
   );
 };

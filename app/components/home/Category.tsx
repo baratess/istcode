@@ -1,5 +1,4 @@
-﻿// use client
-"use client";
+﻿"use client";
 
 import { usePathname, useSearchParams } from "next/navigation";
 import dummy from "../../../utils/dummy.json";
