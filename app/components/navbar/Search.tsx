@@ -58,7 +58,7 @@ const Search = () => {
   return (
     <div>
       <div
-        className="flex justify-end cursor-pointer mr-3"
+        className="flex justify-end cursor-pointer mr-3 hover:scale-105 transform transition duration-200"
         onClick={handleSearchToggle}
       >
         <CiSearch size={30} />

@@ -32,7 +32,7 @@ const Menü = () => {
   }, []);
 
   return (
-    <div className="relative flex px-10 cursor-pointer">
+    <div className="relative flex px-10 cursor-pointer hover:scale-105 transform transition duration-200">
       <div ref={buttonRef}>
         <RxHamburgerMenu
           size={25}

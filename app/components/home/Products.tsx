@@ -17,14 +17,64 @@ const BlogPage: React.FC = () => {
   const searchParams = useSearchParams();
   const category = searchParams.get("category");
 
+  const getBackgroundImage = (category: string) => {
+    switch (category.toLowerCase()) {
+      case "felsefe":
+        return "/felsefe2.jpg";
+      case "teknoloji":
+        return "/teknoloji2.jpg";
+      case "bilim":
+        return "/bilim2.png";
+      default:
+        return "/sanat.webp";
+    }
+  };
+
+  const getTextColor = (category: string) => {
+    switch (category.toLowerCase()) {
+      case "felsefe":
+        return "text-black";
+      case "teknoloji":
+        return "text-white";
+      case "bilim":
+        return "text-green-600";
+      default:
+        return "text-purple-700";
+    }
+  };
+
+  const getCategoryTextColor = (category: string) => {
+    switch (category.toLowerCase()) {
+      case "felsefe":
+        return "text-black";
+      case "teknoloji":
+        return "text-white";
+      case "bilim":
+        return "text-green-600";
+      default:
+        return "text-purple-700";
+    }
+  };
+
+  const getDescTextColor = (category: string) => {
+    switch (category.toLowerCase()) {
+      case "felsefe":
+        return "text-black";
+      case "teknoloji":
+        return "text-white";
+      case "bilim":
+        return "text-green-600";
+      default:
+        return "text-purple-700";
+    }
+  };
+
   useEffect(() => {
     setVisibleCount(6);
 
     if (category) {
-      const filteredCategory = dummy.filter(
-        (post) => post.category === category
-      );
-      setFilteredPosts(filteredCategory);
+      const filtered = dummy.filter((post) => post.category === category);
+      setFilteredPosts(filtered);
     } else {
       setFilteredPosts(dummy);
     }
@@ -40,13 +90,26 @@ const BlogPage: React.FC = () => {
         {filteredPosts.slice(0, visibleCount).map((post: BlogPost) => (
           <div
             key={post.id}
-            className="border border-gray-500 p-6 rounded-lg shadow-md bg-slate-100"
+            className="border border-gray-500 p-6 rounded-lg shadow-md w-full"
+            style={{
+              backgroundImage: `url(${getBackgroundImage(post.category)})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
           >
-            <h2 className="text-2xl font-bold text-gray-800">{post.title}</h2>
-            <h3 className="text-base font-semibold text-gray-600 mt-2">
+            <h2
+              className={` text-2xl font-bold ${getTextColor(post.category)}`}
+            >
+              {post.title.toLocaleUpperCase("tr")}
+            </h2>
+            <h3
+              className={`text-base font-semibold ${getCategoryTextColor(
+                post.category
+              )} mt-2`}
+            >
               Kategori: {post.category.toLocaleUpperCase("tr")}
             </h3>
-            <div className="mt-4 text-gray-700">
+            <div className={`mt-4 ${getDescTextColor(post.category)}`}>
               <p>{post.description}</p>
             </div>
 
