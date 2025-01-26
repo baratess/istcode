@@ -3,105 +3,67 @@ import React from "react";
 
 const HomePage: React.FC = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-200">
-      <div className="flex flex-col md:flex-row items-center mb-10 md:mb-20 mt-5">
-        <div className="order-2 md:order-1 md:w-1/2 text-center md:text-right p-5">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-            Bilim Hakkında Blog Yazıları
-          </h2>
-          <p className="text-gray-600">
-            Bilim hakkında yazılmış blog yazılarını görmek için{" "}
-            <a href="#" className="text-blue-400">
-              tıklayınız.
-            </a>
-          </p>
-        </div>
-        <div className="order-1 md:order-2 md:w-1/2 flex justify-center p-5">
-          <a href="#">
-            <Image
-              src="/Bilim.jpg"
-              alt="Fotoğraf 1"
-              className="rounded-lg shadow-lg w-full md:w-3/4 object-cover transform transition duration-300 hover:scale-105"
-              width={400}
-              height={300}
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="flex flex-col md:flex-row items-center mb-10 md:mb-20">
-        <div className="order-1 md:order-1 md:w-1/2 flex justify-center p-5">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600 pt-20">
+      <div className="flex w-full px-5 gap-8 mb-16">
+        <div className="flex flex-col items-center w-1/2 ml-10">
           <a href="#">
             <Image
               src="/felsefe.jpg"
-              alt="Fotoğraf 2"
-              className="rounded-lg shadow-lg w-full md:w-3/4 object-cover transform transition duration-300 hover:scale-105"
+              alt="Felsefe"
+              className="rounded-lg shadow-2xl w-full object-cover transform transition duration-300 hover:scale-105"
               width={400}
               height={300}
             />
           </a>
-        </div>
-        <div className="order-2 md:order-2 md:w-1/2 text-center md:text-left p-5">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-            Felsefe Hakkında Blog Yazıları
-          </h2>
-          <p className="text-gray-600">
-            Felsefe hakkında yazılmış blog yazılarını görmek için{" "}
-            <a href="#" className="text-blue-400">
-              tıklayınız.
-            </a>
-          </p>
-        </div>
-      </div>
+          <div className="text-white text-xl font-semibold text-center p-5 bg-gray-500 bg-opacity-50 rounded-lg shadow-lg mt-10">
+            <span className="text-yellow-300">Felsefe: </span>Düşüncelerin
+            derinliklerine inen blog yazılarını keşfedin.
+          </div>
 
-      <div className="flex flex-col md:flex-row items-center mb-10 md:mb-20">
-        <div className="order-2 md:order-1 md:w-1/2 text-center md:text-right p-5">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-            Sanat Hakkında Blog Yazıları
-          </h2>
-          <p className="text-gray-600">
-            Sanat hakkında yazılmış blog yazılarını görmek için{" "}
-            <a href="#" className="text-blue-400">
-              tıklayınız.
-            </a>
-          </p>
-        </div>
-        <div className="order-1 md:order-2 md:w-1/2 flex justify-center p-5">
           <a href="#">
             <Image
               src="/sanat.jpeg"
-              alt="Fotoğraf 3"
-              className="rounded-lg shadow-lg w-full md:w-3/4 object-cover transform transition duration-300 hover:scale-105"
+              alt="Sanat"
+              className="rounded-lg shadow-2xl w-full object-cover transform transition duration-300 hover:scale-105 mt-20"
               width={400}
               height={300}
             />
           </a>
+          <div className="text-white text-xl font-semibold text-center p-5 bg-gray-500 bg-opacity-50 rounded-lg shadow-lg mt-10">
+            <span className="text-red-200">Sanat:</span> Yaratıcılığın
+            sınırlarını zorlayan blog yazılarını keşfedin.
+          </div>
         </div>
-      </div>
 
-      <div className="flex flex-col md:flex-row items-center mb-10">
-        <div className="order-1 md:order-1 md:w-1/2 flex justify-center p-5">
+        <div className="flex flex-col items-center w-1/2 mr-10">
           <a href="#">
-            {" "}
+            <Image
+              src="/Bilim.jpg"
+              alt="Bilim"
+              className="rounded-lg shadow-2xl w-full object-cover transform transition duration-300 hover:scale-105 mt-10"
+              width={400}
+              height={300}
+            />
+          </a>
+          <div className="text-white text-xl font-semibold text-center p-5 bg-gray-500 bg-opacity-50 rounded-lg shadow-lg mt-10">
+            <span className="text-green-400">Bilim:</span> Evreni anlamak için
+            yazılmış blog yazılarını keşfedin.
+          </div>
+
+          <a href="#">
             <Image
               src="/teknoloji.jpg"
-              alt="Fotoğraf 4"
-              className="rounded-lg shadow-lg w-full md:w-3/4 object-cover transform transition duration-300 hover:scale-105"
+              alt="Teknoloji"
+              className="rounded-lg shadow-2xl w-full object-cover transform transition duration-300 hover:scale-105 mt-28"
               width={400}
               height={300}
             />
           </a>
-        </div>
-        <div className="order-2 md:order-2 md:w-1/2 text-center md:text-left p-5">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-            Teknoloji Hakkında Blog Yazıları
-          </h2>
-          <p className="text-gray-600">
-            Teknoloji hakkında yazılmış blog yazılarını görmek için{" "}
-            <a href="#" className="text-blue-400">
-              tıklayınız.
-            </a>
-          </p>
+          <div className="text-white text-xl font-semibold text-center p-5 bg-gray-500 bg-opacity-50 rounded-lg shadow-lg mt-10">
+            <span className="text-blue-200">Teknoloji:</span> Geleceği
+            şekillendiren inovasyonlar hakkında yazılmış blog yazılarını
+            keşfedin.
+          </div>
         </div>
       </div>
     </div>

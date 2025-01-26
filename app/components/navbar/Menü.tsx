@@ -31,24 +31,22 @@ const Menü = () => {
       {isOpen && (
         <div
           ref={menuRef}
-          className={`absolute top-10 left-0 bg-gray-800 border border-gray-300 shadow-md p-8 rounded-lg min-w-[200px] min-h-[150px] w-[300px] h-[400px] transition-all duration-300 ease-in-out ${
-            isOpen
-              ? "opacity-100 visible scale-100"
-              : "opacity-0 invisible scale-95"
-          }`}
+          className={
+            "absolute top-10 left-0 bg-gray-800 border border-gray-500 shadow-md p-8 rounded-lg min-w-[200px] min-h-[150px] w-[300px] h-[400px] transition-all duration-300 ease-in-out "
+          }
         >
           <ul>
-            <li className="py-4 pl-2 flex items-center hover:bg-slate-600 rounded-lg text-white">
-              <span className="mr-2">•</span> Sanat
+            <li className="py-4 pl-6 flex items-center hover:bg-slate-600 rounded-lg text-white">
+              Sanat
             </li>
-            <li className="py-4 pl-2 flex items-center hover:bg-slate-600 rounded-lg text-white">
-              <span className="mr-2">•</span> Bilim
+            <li className="py-4 pl-6  flex items-center hover:bg-slate-600 rounded-lg text-white">
+              Bilim
             </li>
-            <li className="py-4 pl-2 flex items-center hover:bg-slate-600 rounded-lg text-white">
-              <span className="mr-2">•</span> Teknoloji
+            <li className="py-4 pl-6 flex items-center hover:bg-slate-600 rounded-lg text-white">
+              Teknoloji
             </li>
-            <li className="py-4 pl-2 flex items-center hover:bg-slate-600 rounded-lg text-white">
-              <span className="mr-2">•</span> Felsefe
+            <li className="py-4 pl-6 flex items-center hover:bg-slate-600 rounded-lg text-white">
+              Felsefe
             </li>
           </ul>
         </div>
