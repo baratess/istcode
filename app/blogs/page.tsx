@@ -3,7 +3,7 @@ import Products from "../components/home/Products";
 
 const Blog = () => {
   return (
-    <div className="bg-gradient-to-r from-gray-500 via-gray-600 to-gray-800 pt-10 m-0 p-0">
+    <div className="bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600 pt-10 m-0 p-0 animate-fadeIn">
       <Category />
       <Products />
     </div>

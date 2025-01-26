@@ -1,4 +1,6 @@
-﻿const Footer = () => {
+﻿"use client";
+
+const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white py-4 h-[50px]">
       <div className="container mx-auto flex justify-between items-center">

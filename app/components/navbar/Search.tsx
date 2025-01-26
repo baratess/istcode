@@ -1,6 +1,4 @@
-﻿"use client";
-
-import { CiSearch } from "react-icons/ci";
+﻿import { CiSearch } from "react-icons/ci";
 import React, { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import dummy from "../../../utils/dummy.json";
@@ -25,7 +23,7 @@ const Search = () => {
     setQuery(searchQuery);
 
     if (!searchQuery) {
-      setFilteredPosts([]);
+      setFilteredPosts(dummy);
     } else {
       const filtered = dummy.filter((post) =>
         post.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -65,14 +63,14 @@ const Search = () => {
       </div>
 
       {isSearchOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-10" />
+        <div className="fixed inset-0 bg-gray-800 bg-opacity-50 z-10" />
       )}
 
       {isSearchOpen && (
         <div className="fixed inset-0 flex justify-center items-center z-20">
           <div
             ref={searchRef}
-            className="bg-white p-6 rounded-lg shadow-lg w-11/12 sm:w-1/3 max-w-lg relative"
+            className="bg-gray-400 p-6 rounded-lg shadow-lg w-11/12 sm:w-1/3 max-w-lg relative"
           >
             <button
               onClick={() => setIsSearchOpen(false)}
@@ -85,7 +83,7 @@ const Search = () => {
               value={query}
               onChange={handleInputChange}
               placeholder="Başlığa göre ara..."
-              className="w-full px-3 py-4 border border-gray-300 rounded mb-4 mt-4"
+              className="w-full px-3 py-4 border bg-slate-600 border-gray-300 rounded mb-4 mt-4"
             />
             {query && (
               <div className="max-h-64 overflow-y-auto">
@@ -93,7 +91,7 @@ const Search = () => {
                   filteredPosts.map((post) => (
                     <div
                       key={post.id}
-                      className="border border-gray-300 p-2 rounded shadow-md mb-2 cursor-pointer"
+                      className="border border-black bg-slate-300 p-2 rounded shadow-md mb-2 cursor-pointer"
                       onClick={() => handlePostClick(post.id, post.category)}
                     >
                       <h2 className="text-lg font-bold text-gray-800">

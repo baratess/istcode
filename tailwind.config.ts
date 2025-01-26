@@ -9,11 +9,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "var(--background)", 
+        foreground: "var(--foreground)", 
+      },
+      animation: {
+        fadeIn: "fadeIn 0.7s ease-in-out", 
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "90%": { opacity: "0.5" },
+        },
+      },
+      spacing: {
+        "128": "32rem", 
       },
     },
   },
   plugins: [],
 };
+
 export default config;

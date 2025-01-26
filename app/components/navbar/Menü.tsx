@@ -32,7 +32,7 @@ const Menü = () => {
   }, []);
 
   return (
-    <div className="relative flex px-10 cursor-pointer hover:scale-105 transform transition duration-200">
+    <div className="relative flex px-10 cursor-pointer ">
       <div ref={buttonRef}>
         <RxHamburgerMenu
           size={25}
@@ -48,24 +48,24 @@ const Menü = () => {
         >
           <ul className="space-y-4">
             <a href="/blogs/sanat">
-              <li className="py-3 pl-6 flex items-center text-white hover:bg-slate-600 rounded-lg transition-all duration-200">
+              <li className="py-3 pl-6 flex items-center text-white hover:bg-slate-600 rounded-lg transition-all duration-200 animate-fadeIn">
                 Sanat
               </li>
             </a>
             <a href="/blogs/bilim">
-              <li className="py-3 pl-6 flex items-center text-white hover:bg-slate-600 rounded-lg transition-all duration-200">
+              <li className="py-3 pl-6 flex items-center text-white hover:bg-slate-600 rounded-lg transition-all duration-200 animate-fadeIn">
                 Bilim
               </li>
             </a>
             <a href="/blogs/teknoloji">
               {" "}
-              <li className="py-3 pl-6 flex items-center text-white hover:bg-slate-600 rounded-lg transition-all duration-200">
+              <li className="py-3 pl-6 flex items-center text-white hover:bg-slate-600 rounded-lg transition-all duration-200 animate-fadeIn">
                 Teknoloji
               </li>
             </a>
             <a href="/blogs/felsefe">
               {" "}
-              <li className="py-3 pl-6 flex items-center text-white hover:bg-slate-600 rounded-lg transition-all duration-200">
+              <li className="py-3 pl-6 flex items-center text-white hover:bg-slate-600 rounded-lg transition-all duration-200 animate-fadeIn">
                 Felsefe
               </li>
             </a>
