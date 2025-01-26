@@ -1,18 +1,14 @@
 ﻿"use client";
 
-import { usePathname, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import dummy from "../../../utils/dummy.json";
 
 const Category = () => {
   const uniqueCategories = [...new Set(dummy.map((post) => post.category))];
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
+  const router = useRouter();
 
   const handleCategoryClick = (category: string) => {
-    const newParams = new URLSearchParams(searchParams.toString());
-    newParams.set("category", category);
-    const newUrl = `${pathname}?${newParams.toString()}`;
-    window.location.href = newUrl;
+    router.push(`/blogs/${category}`);
   };
 
   return (

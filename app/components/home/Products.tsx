@@ -21,8 +21,10 @@ const BlogPage: React.FC = () => {
     setVisibleCount(6);
 
     if (category) {
-      const filtered = dummy.filter((post) => post.category === category);
-      setFilteredPosts(filtered);
+      const filteredCategory = dummy.filter(
+        (post) => post.category === category
+      );
+      setFilteredPosts(filteredCategory);
     } else {
       setFilteredPosts(dummy);
     }
@@ -50,7 +52,7 @@ const BlogPage: React.FC = () => {
 
             <div className="mt-4">
               <a
-                href={`/blogs/${post.id}`}
+                href={`/blogs/${post.category}/${post.id}`}
                 className="text-blue-500 hover:underline"
               >
                 Detayları Gör
