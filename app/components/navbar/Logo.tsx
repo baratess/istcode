@@ -1,9 +1,11 @@
-﻿import Image from "next/image";
+﻿import Link from "next/link";
 
 const Logo = () => {
   return (
-    <div className="flex px-[65vh] rounded-md text-lg md:text-2xl cursor-pointer mt-16">
-      <Image src={"/istcode.jpeg"} alt="#" width={200} height={200} />
+    <div className="flex px-[66vh] items-center justify-center bg-gray-800 ">
+      <h1 className="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 ">
+        <Link href={"/"}>İstcode</Link>
+      </h1>
     </div>
   );
 };

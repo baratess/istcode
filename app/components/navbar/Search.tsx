@@ -58,7 +58,7 @@ const Search = () => {
   return (
     <div>
       <div
-        className="flex justify-end cursor-pointer"
+        className="flex justify-end cursor-pointer mr-3"
         onClick={handleSearchToggle}
       >
         <CiSearch size={30} />

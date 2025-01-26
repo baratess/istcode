@@ -5,7 +5,7 @@ import { FaYoutube } from "react-icons/fa";
 
 const Icons = () => {
   return (
-    <div className="hidden md:flex gap-3 relative cursor-pointer ">
+    <div className="hidden md:flex gap-3 relative cursor-pointer text-red-400 ">
       <FaFacebook size={25} />
       <FaInstagram size={25} />
       <FaXTwitter size={25} />
