@@ -34,10 +34,10 @@ const Search = () => {
     }
   };
 
-  const handlePostClick = (postId: string) => {
+  const handlePostClick = (postId: string, postCategory: string) => {
     setIsSearchOpen(false);
     setQuery("");
-    router.push(`/blogs/${postId}`);
+    router.push(`/blogs/${postCategory}/${postId}`);
   };
 
   useEffect(() => {
@@ -58,7 +58,7 @@ const Search = () => {
   return (
     <div>
       <div
-        className="flex justify-end cursor-pointer mr-3 hover:scale-105 transform transition duration-200"
+        className="flex justify-end cursor-pointer mr-3"
         onClick={handleSearchToggle}
       >
         <CiSearch size={30} />
@@ -94,7 +94,7 @@ const Search = () => {
                     <div
                       key={post.id}
                       className="border border-gray-300 p-2 rounded shadow-md mb-2 cursor-pointer"
-                      onClick={() => handlePostClick(post.id)}
+                      onClick={() => handlePostClick(post.id, post.category)}
                     >
                       <h2 className="text-lg font-bold text-gray-800">
                         {post.title}
