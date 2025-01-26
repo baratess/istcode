@@ -1,12 +1,11 @@
 ﻿import Image from "next/image";
-import React from "react";
 
 const HomePage: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600 pt-20">
       <div className="flex w-full px-5 gap-8 mb-16">
         <div className="flex flex-col items-center w-1/2 ml-10">
-          <a href="#">
+          <a href="/blogs/felsefe">
             <Image
               src="/felsefe.jpg"
               alt="Felsefe"
@@ -20,7 +19,7 @@ const HomePage: React.FC = () => {
             derinliklerine inen blog yazılarını keşfedin.
           </div>
 
-          <a href="#">
+          <a href="/blogs/sanat">
             <Image
               src="/sanat.jpeg"
               alt="Sanat"
@@ -36,7 +35,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center w-1/2 mr-10">
-          <a href="#">
+          <a href="/blogs/bilim">
             <Image
               src="/Bilim.jpg"
               alt="Bilim"
@@ -50,7 +49,7 @@ const HomePage: React.FC = () => {
             yazılmış blog yazılarını keşfedin.
           </div>
 
-          <a href="#">
+          <a href="/blogs/teknoloji">
             <Image
               src="/teknoloji.jpg"
               alt="Teknoloji"
