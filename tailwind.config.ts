@@ -24,6 +24,9 @@ const config: Config = {
       spacing: {
         "128": "32rem", 
       },
+      fontSize: {
+        'xs-custom': '0.8rem',  
+      },
     },
   },
   plugins: [],
