@@ -5,7 +5,7 @@ import Menü from "./Menü";
 import Search from "./Search";
 import User from "./User";
 import Link from "next/link";
-import AboutUs from "./AboutUs";
+import About from "./About";
 
 const Navbar: React.FC = () => {
   return (
@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
 
           <div className="flex flex-grow items-center justify-center text-sm sm:text-xs-custom">
             <Blogs />
-            <AboutUs />
+            <About />
           </div>
 
           <div className="flex items-center ml-auto sm:ml-0 pr-6">
