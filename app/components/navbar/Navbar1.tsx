@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import Blogs from "./Blogs";
-import Home from "./Home";
+import Home from "./AboutUs";
 import Menü from "./Menü";
 import Search from "./Search";
 import User from "./User";
@@ -24,8 +24,8 @@ const Navbar: React.FC = () => {
           </div>
 
           <div className="hidden md:flex flex-grow items-center justify-center gap-6">
-            <Home />
             <Blogs />
+            <Home />
           </div>
 
           <div className="flex items-center gap-3 ml-auto">
