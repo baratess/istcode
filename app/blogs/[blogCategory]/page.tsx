@@ -27,6 +27,44 @@ const BlogCategory: React.FC = () => {
         return "/sanat.webp";
     }
   };
+  const getTextColor = (category: string) => {
+    switch (category.toLowerCase()) {
+      case "felsefe":
+        return "text-black";
+      case "teknoloji":
+        return "text-white";
+      case "bilim":
+        return "text-green-600";
+      default:
+        return "text-purple-700";
+    }
+  };
+
+  const getCategoryTextColor = (category: string) => {
+    switch (category.toLowerCase()) {
+      case "felsefe":
+        return "text-black";
+      case "teknoloji":
+        return "text-white";
+      case "bilim":
+        return "text-green-600";
+      default:
+        return "text-purple-700";
+    }
+  };
+
+  const getDescTextColor = (category: string) => {
+    switch (category.toLowerCase()) {
+      case "felsefe":
+        return "text-black";
+      case "teknoloji":
+        return "text-white";
+      case "bilim":
+        return "text-green-600";
+      default:
+        return "text-purple-700";
+    }
+  };
 
   useEffect(() => {
     if (blogCategory && !Array.isArray(blogCategory)) {
@@ -65,11 +103,17 @@ const BlogCategory: React.FC = () => {
               backgroundPosition: "center",
             }}
           >
-            <h2 className="text-xl font-bold text-gray-800">{post.title}</h2>
-            <h3 className="text-base font-semibold text-gray-600 mt-2">
+            <h2 className={`text-xl font-bold ${getTextColor(post.category)}`}>
+              {post.title.toLocaleUpperCase("tr")}
+            </h2>
+            <h3
+              className={`text-base font-semibold ${getCategoryTextColor(
+                post.category
+              )} mt-2`}
+            >
               Kategori: {post.category.toLocaleUpperCase("tr")}
             </h3>
-            <div className="mt-4 text-gray-700">
+            <div className={`mt-4 ${getDescTextColor(post.category)}`}>
               <p>{post.description}</p>
             </div>
             <div className="mt-4">
