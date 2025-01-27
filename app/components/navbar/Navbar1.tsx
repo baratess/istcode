@@ -9,7 +9,7 @@ import About from "./About";
 
 const Navbar: React.FC = () => {
   return (
-    <div className="bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600  animate-fadeIn">
+    <div className="bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600 animate-fadeIn">
       <div className="relative">
         <header className="flex items-center justify-between py-3 bg-gradient-to-r from-gray-700 to-gray-800 text-white shadow-lg h-[120px] rounded-md max-w-screen-xl w-full mx-auto">
           <div className="flex items-center w-full sm:w-auto">
@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
             <About />
           </div>
 
-          <div className="flex items-center ml-auto sm:ml-0 pr-7">
+          <div className="flex items-center ml-auto sm:ml-0 pr-2">
             <Search />
             <User />
           </div>
