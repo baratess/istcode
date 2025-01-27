@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
             <About />
           </div>
 
-          <div className="flex items-center ml-auto sm:ml-0 pr-6">
+          <div className="flex items-center ml-auto sm:ml-0 pr-7">
             <Search />
             <User />
           </div>

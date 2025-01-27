@@ -32,7 +32,7 @@ const Menü = () => {
   }, []);
 
   return (
-    <div className="relative flex px-5 gap-1 cursor-pointer ">
+    <div className="relative flex px-5 cursor-pointer ">
       <div ref={buttonRef}>
         <RxHamburgerMenu
           size={25}
