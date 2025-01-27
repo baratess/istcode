@@ -40,4 +40,4 @@
 ## Canlı Proje
 
 [Vercel Üzerinde Canlı Görüntüle]
-(Yüklenecek...)
+(https://istcode-eight.vercel.app/)
