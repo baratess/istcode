@@ -14,7 +14,6 @@ interface BlogPost {
 const BlogCategory: React.FC = () => {
   const { blogCategory } = useParams();
   const [posts, setPosts] = useState<BlogPost[]>([]);
-  console.log(blogCategory);
 
   const getBackgroundImage = (blogCategory: string) => {
     switch (blogCategory.toLowerCase()) {
