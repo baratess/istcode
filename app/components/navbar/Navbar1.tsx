@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
     <div className="bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600 pt-10 animate-fadeIn">
       <div className="relative">
         <header className="flex items-center justify-between py-3 bg-gradient-to-r from-gray-700 to-gray-800 text-white shadow-lg h-[120px] rounded-md max-w-screen-xl w-full mx-auto">
-          <div className="flex items-center gap-6 w-full sm:w-auto">
+          <div className="flex items-center w-full sm:w-auto">
             <Menü />
             <div className=" font-extrabold flex-grow sm:flex-grow-0 text-center sm:text-left">
               <Link href="/">
@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
             <AboutUs />
           </div>
 
-          <div className="flex items-center gap-3 ml-auto sm:ml-0 pr-5">
+          <div className="flex items-center ml-auto sm:ml-0 pr-5">
             <Search />
             <User />
           </div>
