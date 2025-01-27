@@ -13,7 +13,7 @@
 - Anlık başlık arama özelliği.
 - Detay sayfasında içeriğin detaylarının gösterimi.
 - Responsive ve kullanıcı dostu arayüz.
-- Farklı boyutlardaki ekranlara uyumluluk.
+- Farklı boyutlardaki ekranlara uyumluluk. (Responsive yapı eklendi)
 
 ## Kullanılan Teknolojiler
 
