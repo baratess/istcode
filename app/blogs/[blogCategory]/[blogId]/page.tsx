@@ -63,6 +63,10 @@ const BlogDetails: React.FC = () => {
           </h1>
 
           <div className="text-gray-700 leading-relaxed mt-5 text-center">
+            <p>{post.category.toUpperCase()}</p>
+          </div>
+
+          <div className="text-gray-700 leading-relaxed mt-5 text-center">
             <p>{post.description}</p>
           </div>
 
