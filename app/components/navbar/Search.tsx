@@ -56,7 +56,7 @@ const Search = () => {
   return (
     <div>
       <div
-        className="flex justify-end cursor-pointer pr-3"
+        className="flex justify-end cursor-pointer pr-1"
         onClick={handleSearchToggle}
       >
         <CiSearch size={30} />
@@ -67,7 +67,7 @@ const Search = () => {
       )}
 
       {isSearchOpen && (
-        <div className="fixed inset-0 flex justify-center items-center z-20">
+        <div className="fixed inset-0 flex justify-center items-center z-20 pr-3">
           <div
             ref={searchRef}
             className="bg-gray-400 p-6 rounded-lg shadow-lg w-11/12 sm:w-1/3 max-w-lg relative"
@@ -75,9 +75,7 @@ const Search = () => {
             <button
               onClick={() => setIsSearchOpen(false)}
               className="absolute top-1 right-2 text-gray-500 hover:text-red-500"
-            >
-              &times;
-            </button>
+            ></button>
             <input
               type="text"
               value={query}
