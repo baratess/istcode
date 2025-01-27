@@ -56,7 +56,7 @@ const Search = () => {
   return (
     <div>
       <div
-        className="flex justify-end cursor-pointer pr-1"
+        className="flex justify-end cursor-pointer"
         onClick={handleSearchToggle}
       >
         <CiSearch size={30} />
@@ -67,7 +67,7 @@ const Search = () => {
       )}
 
       {isSearchOpen && (
-        <div className="fixed inset-0 flex justify-center items-center z-20 pr-3">
+        <div className="fixed inset-0 flex justify-center items-center z-20 pr-7">
           <div
             ref={searchRef}
             className="bg-gray-400 p-6 rounded-lg shadow-lg w-11/12 sm:w-1/3 max-w-lg relative"
