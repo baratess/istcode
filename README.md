@@ -9,10 +9,11 @@
 ## Özellikler
 
 - JSON formatında içerik listeleme.
-- Kategoriye göre filtreleme (Dropdown veya checkbox ile (Belirlenmedi)).
+- Kategoriye göre filtreleme (Dropdown ile).
 - Anlık başlık arama özelliği.
 - Detay sayfasında içeriğin detaylarının gösterimi.
 - Responsive ve kullanıcı dostu arayüz.
+- Farklı boyutlardaki ekranlara uyumluluk.
 
 ## Kullanılan Teknolojiler
 
