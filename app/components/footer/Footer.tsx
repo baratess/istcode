@@ -9,7 +9,7 @@ const Footer = () => {
           <a href="#" className="hover:underline">
             Hakkımızda
           </a>
-          <a href="#" className="hover:underline">
+          <a href="https://www.istcode.com/en/" className="hover:underline">
             İletişim
           </a>
           <a href="#" className="hover:underline">

@@ -1,11 +1,25 @@
-﻿import Image from "next/image";
+﻿"use client";
+
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const HomePage: React.FC = () => {
+  const router = useRouter();
+
+  const handleCategoryClick = (category: string) => {
+    setTimeout(() => {
+      router.push(`/blogs/${category}`);
+    }, 700);
+  };
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600 pt-20">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600 pt-20 animate-fadeIn">
       <div className="flex w-full px-5 gap-8 mb-16">
         <div className="flex flex-col items-center w-1/2 ml-10">
-          <a href="/blogs/felsefe">
+          <div
+            onClick={() => handleCategoryClick("felsefe")}
+            className="animate-fadeIn"
+          >
             <Image
               src="/felsefe.jpg"
               alt="Felsefe"
@@ -13,13 +27,16 @@ const HomePage: React.FC = () => {
               width={400}
               height={300}
             />
-          </a>
+          </div>
           <div className="text-white text-xl font-semibold text-center p-5 bg-gray-500 bg-opacity-50 rounded-lg shadow-lg mt-10">
             <span className="text-yellow-300">Felsefe: </span>Düşüncelerin
             derinliklerine inen blog yazılarını keşfedin.
           </div>
 
-          <a href="/blogs/sanat">
+          <div
+            onClick={() => handleCategoryClick("sanat")}
+            className="animate-fadeIn"
+          >
             <Image
               src="/sanat.jpeg"
               alt="Sanat"
@@ -27,7 +44,7 @@ const HomePage: React.FC = () => {
               width={400}
               height={300}
             />
-          </a>
+          </div>
           <div className="text-white text-xl font-semibold text-center p-5 bg-gray-500 bg-opacity-50 rounded-lg shadow-lg mt-10">
             <span className="text-red-200">Sanat:</span> Yaratıcılığın
             sınırlarını zorlayan blog yazılarını keşfedin.
@@ -35,7 +52,10 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center w-1/2 mr-10">
-          <a href="/blogs/bilim">
+          <div
+            onClick={() => handleCategoryClick("bilim")}
+            className="animate-fadeIn"
+          >
             <Image
               src="/Bilim.jpg"
               alt="Bilim"
@@ -43,13 +63,16 @@ const HomePage: React.FC = () => {
               width={400}
               height={300}
             />
-          </a>
+          </div>
           <div className="text-white text-xl font-semibold text-center p-5 bg-gray-500 bg-opacity-50 rounded-lg shadow-lg mt-10">
             <span className="text-green-400">Bilim:</span> Evreni anlamak için
             yazılmış blog yazılarını keşfedin.
           </div>
 
-          <a href="/blogs/teknoloji">
+          <div
+            onClick={() => handleCategoryClick("teknoloji")}
+            className="animate-fadeIn"
+          >
             <Image
               src="/teknoloji.jpg"
               alt="Teknoloji"
@@ -57,7 +80,7 @@ const HomePage: React.FC = () => {
               width={400}
               height={300}
             />
-          </a>
+          </div>
           <div className="text-white text-xl font-semibold text-center p-5 bg-gray-500 bg-opacity-50 rounded-lg shadow-lg mt-10">
             <span className="text-blue-200">Teknoloji:</span> Geleceği
             şekillendiren inovasyonlar hakkında yazılmış blog yazılarını

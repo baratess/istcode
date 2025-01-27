@@ -47,7 +47,7 @@ const BlogCategory: React.FC = () => {
   }
 
   return (
-    <div className="px-4 md:px-10 py-8 bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600 pt-4 ">
+    <div className="px-4 md:px-10 py-8 bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600 pt-4 animate-fadeIn">
       <h1 className="flex justify-center text-3xl font-bold text-white mb-6 mt-3">
         {blogCategory && !Array.isArray(blogCategory)
           ? blogCategory.charAt(0).toLocaleUpperCase("tr") +

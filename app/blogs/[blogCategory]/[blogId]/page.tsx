@@ -14,17 +14,16 @@ interface BlogPost {
 const BlogDetails: React.FC = () => {
   const { blogId } = useParams();
   const [post, setPost] = useState<BlogPost | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
+
   const [showNotFoundMessage, setShowNotFoundMessage] =
     useState<boolean>(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLoading(false);
       if (!post) {
         setShowNotFoundMessage(true);
       }
-    }, 1000);
+    }, 700);
 
     if (blogId) {
       const selectedPost = dummy.find((post) => post.id === blogId);
@@ -38,14 +37,6 @@ const BlogDetails: React.FC = () => {
     return () => clearTimeout(timer);
   }, [blogId, post]);
 
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center h-screen">
-        <p>Yükleniyor...</p>
-      </div>
-    );
-  }
-
   if (showNotFoundMessage && !post) {
     return (
       <div className="flex justify-center items-center h-screen">
@@ -56,14 +47,14 @@ const BlogDetails: React.FC = () => {
 
   if (post) {
     return (
-      <div className="px-4 md:px-10 py-8 flex justify-center items-center h-screen bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600">
+      <div className="px-4 md:px-10 py-8 flex justify-center items-center h-screen bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600 animate-fadeIn">
         <div className="p-6 rounded-lg shadow-2xl bg-slate-200 w-[700px] h-[720px] border-blue-200 border-4">
           <h1 className="text-4xl font-bold text-gray-800 mb-4 mt-10 pt-5 text-center">
             {post.title}
           </h1>
 
           <div className="text-gray-700 leading-relaxed mt-5 text-center">
-            <p>{post.category.toUpperCase()}</p>
+            <p>{post.category.toLocaleUpperCase("tr")}</p>
           </div>
 
           <div className="text-gray-700 leading-relaxed mt-5 text-center">

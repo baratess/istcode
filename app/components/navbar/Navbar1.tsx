@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const Navbar: React.FC = () => {
   return (
-    <div className="bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600 pt-10">
+    <div className="bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600 pt-10 animate-fadeIn">
       <div className="relative">
         <header className="flex items-center justify-between px-6 py-3 bg-gradient-to-r from-gray-700 to-gray-800 text-white shadow-lg h-[120px] rounded-md max-w-screen-xl w-full mx-auto">
           <div className="flex items-center gap-6">
