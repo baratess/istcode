@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import React, { useState, useEffect } from "react";
+import React, { Suspense, useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import dummy from "../../../utils/dummy.json";
 
@@ -139,4 +139,12 @@ const BlogPage: React.FC = () => {
   );
 };
 
-export default BlogPage;
+const BlogPageWrapper: React.FC = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <BlogPage />
+    </Suspense>
+  );
+};
+
+export default BlogPageWrapper;
