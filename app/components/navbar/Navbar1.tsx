@@ -16,14 +16,14 @@ const Navbar: React.FC = () => {
             <Menü />
             <div className="text-2xl font-extrabold flex-grow sm:flex-grow-0 text-center sm:text-left">
               <Link href="/">
-                <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 hover:scale-105 transform transition duration-200 text-4xl">
+                <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 hover:scale-105 transform transition duration-200 text-4xl sm:text-3xl">
                   İstcode
                 </h1>
               </Link>
             </div>
           </div>
 
-          <div className="hidden md:flex flex-grow items-center justify-center gap-6">
+          <div className="hidden md:flex flex-grow items-center justify-center gap-6 text-sm sm:text-base">
             <Blogs />
             <AboutUs />
           </div>
